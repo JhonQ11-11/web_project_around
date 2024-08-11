@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web_project_around</title>
+
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="stylesheet" href="./vendor/fonts/fonts.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/Vector.svg"
+          class="header__logo"
+          alt="logo__Around"
+        />
+      </header>
+      <div class="container">
+        <div class="popup">
+          <button class="popup__button-close">
+            <img src="./images/Close-Icon.svg" alt="boton de cierre" />
+          </button>
+          <form class="popup__form">
+            <h2 class="popup__title">Editar perfil</h2>
+            <input
+              type="text"
+              placeholder="nombre"
+              class="popup__input"
+              id="name"
+            />
+            <input
+              type="text"
+              placeholder="Acerca de mi "
+              class="popup__input"
+              id="about-me"
+            />
+
+            <div>
+              <button class="popup__button-submit">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <main class="content">
+        <section class="profile">
+          <img
+            src="./images/avatar.jpg"
+            class="profile__image"
+            alt="jack-Cousteau"
+          />
+          <div>
+            <div class="profile__content">
+              <h2 class="profile__name">Jacques Cousteau</h2>
+              <button class="profile__edit-button">
+                <img src="./images/edit-button.svg" />
+              </button>
+            </div>
+
+            <h3 class="profile__ocupation">explorador</h3>
+          </div>
+          <button class="profile__add-button">
+            <img src="./images/add-button.svg" />
+          </button>
+        </section>
+        <section class="elements">
+          <div class="cards">
+            <div class="card">
+              <img src="./images/Lago-Louise.jpg" class="card__image" alt="" />
+              <div class="card__container">
+                <p class="card__title">Lago de Louise</p>
+                <button class="card__like-button">
+                  <img
+                    src="./images/like-button.svg"
+                    alt="boton de 'MEGUSTA' "
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./images/LagoDiBrales.jpg" class="card__image" alt="" />
+              <div class="card__container">
+                <p class="card__title">Lago de Brales</p>
+                <button class="card__like-button">
+                  <img
+                    class=""
+                    src="./images/like-button.svg"
+                    alt="boton de 'MEGUSTA' "
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./images/Latemar.jpg" class="card__image" alt="" />
+              <div class="card__container">
+                <p class="card__title">Latemar</p>
+                <button class="card__like-button">
+                  <img
+                    class=""
+                    src="./images/like-button.svg"
+                    alt="boton de 'MEGUSTA' "
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="./images/Montañas-Calvas.jpg"
+                class="card__image"
+                alt=""
+              />
+              <div class="card__container">
+                <p class="card__title">Montañas Calvas</p>
+                <button class="card__like-button">
+                  <img
+                    class=""
+                    src="./images/like-button.svg"
+                    alt="boton de 'MEGUSTA' "
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="./images/Valle-Yosemite.jpg"
+                class="card__image"
+                alt=""
+              />
+              <div class="card__container">
+                <p class="card__title">Yosemite</p>
+                <button class="card__like-button">
+                  <img
+                    class=""
+                    src="./images/like-button.svg"
+                    alt="boton de 'MEGUSTA' "
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="./images/VanoisNational.jpg"
+                class="card__image"
+                alt=""
+              />
+              <div class="card__container">
+                <p class="card__title">Vanois National</p>
+                <button class="card__like-button">
+                  <img
+                    class=""
+                    src="./images/like-button.svg"
+                    alt="boton de 'MEGUSTA' "
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">&copy; 2024 Around The U.S</footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

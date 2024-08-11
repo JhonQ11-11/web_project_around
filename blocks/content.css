@@ -1,0 +1,17 @@
+.content {
+  max-width: 880px;
+
+  margin: auto;
+}
+
+@media screen and (max-width: 880px) {
+  .content {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .content {
+    margin: auto;
+  }
+}

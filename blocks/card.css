@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 282px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden; /*ocultar elementos que se sobresalgan del padre*/
+  margin: auto;
+}
+
+.card__image {
+  max-width: 282px;
+  width: 100%;
+  height: auto;
+  background: black;
+
+  object-fit: cover;
+  margin: auto;
+  margin-bottom: 0;
+}
+.card__container {
+  display: flex;
+  max-width: 282px;
+  width: 100%;
+}
+.card__title {
+  width: 100%;
+  background-color: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: center;
+}
+.card__like-button {
+  border: none;
+}

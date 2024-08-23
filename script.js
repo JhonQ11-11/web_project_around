@@ -1,33 +1,51 @@
 const editButton = document.querySelector(".profile__edit-button"); // buscamos el boton en el DOM, DECLARAMOS LA VARIABLE
 const addButton = document.querySelector(".profile__add-button");
 const closeButton = document.querySelector(".popup__button-close ");
-const inputName = document.querySelector("#name");
+const inputName = document.querySelector("#name"); // se usa # cuando es ID
 const inputAbout = document.querySelector("#about-me");
-
-function ejecutar() {
-  const popup = document.querySelector(".popup"); //le dice que busque dentro del popup
-  popup.classList.add("popup__open"); // nueva clase creada
-}
-editButton.addEventListener("click", ejecutar);
-
 const submit = document.querySelector(".popup__button-submit");
-submit.addEventListener("click", handleProfileFormSubmit);
+
+function openPopup() {
+  const popup = document.querySelector(".popup");
+  popup.classList.add("popup__open");
+  checkFormValidity(); // se llama a la funcion de validacion dentro del popup.
+}
+editButton.addEventListener("click", openPopup); // cada que se clickee en editButton se ejecuta openPopup
 
 function handleProfileFormSubmit(evt) {
-  evt.preventDefault();
+  evt.preventDefault(); //impide que el navgador entregue el formulario en su forma predeterminada
   const name = document.querySelector(".profile__name");
   const about = document.querySelector(".profile__ocupation");
-
-  name.textContent = inputName.value; //del elemento html va ser igual al input name
+  name.textContent = inputName.value; //INGRESAR TEXTO AL INPUT
   about.textContent = inputAbout.value;
-  close();
+  closePopup();
 }
-if (inputName.value !== "" && inputAbout.value !== "") {
-  submit.disabled = true;
-  submit.setAttribute("style", "background-color: #C4C4C4 ;");
+
+function checkFormValidity() {
+  if (inputName.value === " " || inputAbout.value === "") {
+    //SI inputName.value es ifual a string vacio entonces ejecutas ...
+    submit.disabled = true; // boton guardar desactivado
+    submit.setAttribute("style", "background-color: #C4C4C4 ;"); // boton guardar guardar color blanco
+  } else {
+    // de lo contario
+    submit.disabled = false; //si la condicion es falsa, es decir, los inputs no estan vacios, se activa
+    submit.setAttribute("style", "background-color: black;"); // al mismo tiempo se aplica el nuevo estilo al boton
+  }
 }
-function close() {
+
+//
+inputName.addEventListener("input", () => {
+  checkFormValidity(); //por cada caracter name  se va a llamar a la funcion
+});
+
+inputAbout.addEventListener("input", () => {
+  checkFormValidity();
+});
+
+submit.addEventListener("click", handleProfileFormSubmit); // cuando se clickee guardar se ejecuta hadl..
+
+function closePopup() {
   const popup = document.querySelector(".popup");
   popup.classList.remove("popup__open");
 }
-closeButton.addEventListener("click", close);
+closeButton.addEventListener("click", closePopup);

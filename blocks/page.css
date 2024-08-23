@@ -3,7 +3,7 @@
   background-color: black;
   margin: auto;
   box-sizing: border-box;
-  max-width: 1280px;
+  /*max-width: 1280px;*/
   width: 100%;
 }
 @media screen and (max-with: 880px) {

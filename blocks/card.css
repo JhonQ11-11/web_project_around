@@ -20,19 +20,25 @@
 }
 .card__container {
   display: flex;
-  max-width: 282px;
-  width: 100%;
-}
-.card__title {
   width: 100%;
   background-color: white;
+}
+.card__title {
+  max-width: 250px;
+  width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
   margin: 0 auto;
+  padding-left: 21px;
   font-weight: 900;
   font-size: 24px;
-  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 .card__like-button {
   border: none;
+  margin: auto;
+  margin-right: 18px;
 }

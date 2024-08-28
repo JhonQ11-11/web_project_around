@@ -1,4 +1,4 @@
-const editButton = document.querySelector(".profile__edit-button"); // buscamos el boton en el DOM, DECLARAMOS LA VARIABLE
+const editButton = document.querySelector(".profile__edit-button"); // declaramos LA VARIABLE--> buscamos mediante DOM LA UBICACION EN EL HTML
 const addButton = document.querySelector(".profile__add-button");
 const closeButton = document.querySelector(".popup__button-close ");
 const inputName = document.querySelector("#name"); // se usa # cuando es ID
@@ -8,7 +8,7 @@ const submit = document.querySelector(".popup__button-submit");
 function openPopup() {
   const popup = document.querySelector(".popup");
   popup.classList.add("popup__open");
-  checkFormValidity(); // se llama a la funcion de validacion dentro del popup.
+  checkFormValidity(); // se llama a la funcion de validacion dentro del popup.lINE 24
 }
 editButton.addEventListener("click", openPopup); // cada que se clickee en editButton se ejecuta openPopup
 

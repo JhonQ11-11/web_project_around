@@ -17,6 +17,18 @@
   object-fit: cover;
   margin: auto;
   margin-bottom: 0;
+  position: relative;
+}
+
+.card__button-delete {
+  border: none;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  z-index: 1;
+  background: none;
+  margin-left: 245px;
+  margin-top: 10px;
 }
 .card__container {
   display: flex;

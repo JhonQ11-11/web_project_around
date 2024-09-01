@@ -42,6 +42,29 @@
           </form>
         </div>
       </div>
+      <div class="container__addButton">
+        <div class="popup__add">
+          <button class="popup__button-close">
+            <img src="./images/Close-Icon.svg" alt="boton de cierre" />
+          </button>
+          <form class="popup__form-add">
+            <h2 class="popup__titleAdd">New place</h2>
+            <input
+              type="text"
+              placeholder="title"
+              class="popup__input"
+              id="title"
+            />
+            <input
+              type="url"
+              placeholder="image URL"
+              class="popup__input"
+              id="NewImage"
+            />
+            <button class="popup__button-submit">Save</button>
+          </form>
+        </div>
+      </div>
 
       <main class="content">
         <section class="profile">
@@ -67,6 +90,9 @@
         <section class="elements">
           <div class="cards">
             <div class="card">
+              <button class="card__button-delete">
+                <img src="images/icon-delete.svg" class="" />
+              </button>
               <img src="./images/Lago-Louise.jpg" class="card__image" alt="" />
               <div class="card__container">
                 <p class="card__title">Lago de Louise</p>
@@ -79,6 +105,9 @@
               </div>
             </div>
             <div class="card">
+              <button class="card__button-delete">
+                <img src="images/icon-delete.svg" class="" />
+              </button>
               <img src="./images/LagoDiBrales.jpg" class="card__image" alt="" />
               <div class="card__container">
                 <p class="card__title">Lago de Brales</p>
@@ -91,6 +120,9 @@
               </div>
             </div>
             <div class="card">
+              <button class="card__button-delete">
+                <img src="images/icon-delete.svg" class="" />
+              </button>
               <img src="./images/Latemar.jpg" class="card__image" alt="" />
               <div class="card__container">
                 <p class="card__title">Latemar</p>
@@ -104,6 +136,9 @@
               </div>
             </div>
             <div class="card">
+              <button class="card__button-delete">
+                <img src="images/icon-delete.svg" class="" />
+              </button>
               <img
                 src="./images/Montañas-Calvas.jpg"
                 class="card__image"
@@ -121,6 +156,9 @@
               </div>
             </div>
             <div class="card">
+              <button class="card__button-delete">
+                <img src="images/icon-delete.svg" class="" />
+              </button>
               <img
                 src="./images/Valle-Yosemite.jpg"
                 class="card__image"
@@ -138,6 +176,9 @@
               </div>
             </div>
             <div class="card">
+              <button class="card__button-delete">
+                <img src="images/icon-delete.svg" class="" />
+              </button>
               <img
                 src="./images/VanoisNational.jpg"
                 class="card__image"
@@ -159,6 +200,17 @@
       </main>
       <footer class="footer">&copy; 2024 Around The U.S</footer>
     </div>
+    <template id=" card-template">
+      <div class="card">
+        <img src="" class="card__image" alt="" />
+        <div class="card__container">
+          <p class="card__title"></p>
+          <button class="card__like-button">
+            <img src="./images/like-button.svg" alt="boton de 'MEGUSTA' " />
+          </button>
+        </div>
+      </div>
+    </template>
     <script src="script.js"></script>
   </body>
 </html>

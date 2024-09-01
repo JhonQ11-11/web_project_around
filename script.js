@@ -1,13 +1,15 @@
 const editButton = document.querySelector(".profile__edit-button"); // declaramos LA VARIABLE--> buscamos mediante DOM LA UBICACION EN EL HTML
 const addButton = document.querySelector(".profile__add-button");
-const closeButton = document.querySelector(".popup__button-close ");
+const closeButton = document.querySelectorAll(".popup__button-close "); //selleciona todos los elementos con la clase...
 const inputName = document.querySelector("#name"); // se usa # cuando es ID
 const inputAbout = document.querySelector("#about-me");
 const submit = document.querySelector(".popup__button-submit");
+const deleteButton = document.querySelector(".card__button-delete");
 
 function openPopup() {
   const popup = document.querySelector(".popup");
   popup.classList.add("popup__open");
+
   checkFormValidity(); // se llama a la funcion de validacion dentro del popup.lINE 24
 }
 editButton.addEventListener("click", openPopup); // cada que se clickee en editButton se ejecuta openPopup
@@ -33,7 +35,6 @@ function checkFormValidity() {
   }
 }
 
-//
 inputName.addEventListener("input", () => {
   checkFormValidity(); //por cada caracter name  se va a llamar a la funcion
 });
@@ -48,4 +49,16 @@ function closePopup() {
   const popup = document.querySelector(".popup");
   popup.classList.remove("popup__open");
 }
-closeButton.addEventListener("click", closePopup);
+closeButton[0].addEventListener("click", closePopup); // primer elemento que se encuentre
+
+function openAddButton() {
+  const popupAdd = document.querySelector(".popup__add");
+  popupAdd.classList.add("popup__add-open");
+}
+addButton.addEventListener("click", openAddButton);
+
+function closePopupAdd() {
+  const popupAdd = document.querySelector(".popup__add");
+  popupAdd.classList.remove("popup__add-open");
+}
+closeButton[1].addEventListener("click", closePopupAdd); // segundo elemento.

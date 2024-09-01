@@ -4,6 +4,7 @@
   position: fixed;
   margin: auto;
   display: none;
+  z-index: 2;
 }
 .popup__open {
   display: block;
@@ -63,6 +64,28 @@
 .popup__button-submit:hover {
   opacity: 80%;
 }
+
+.popup__add {
+  max-width: 430px;
+  width: 100%;
+  position: fixed;
+  margin: auto;
+  display: none;
+  z-index: 2;
+}
+.popup__add-open {
+  display: block;
+}
+.popup__form-add {
+  background-color: #ffffff;
+  height: 330px;
+  padding-left: 30px;
+}
+
+.popup__titleAdd {
+  padding-top: 30px;
+}
+
 @media screen and (max-width: 800px) {
 }
 @media screen and (max-width: 500px) {

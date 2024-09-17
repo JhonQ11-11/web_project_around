@@ -4,7 +4,7 @@
   position: fixed;
   margin: auto;
   display: none;
-  z-index: 2;
+  z-index: 5;
 }
 .popup__open {
   display: block;
@@ -13,11 +13,18 @@
 .popup__button-close {
   display: flex;
   position: absolute;
-  background: #000000;
+  background: transparent;
   margin: auto;
   margin-left: 430px;
   margin-top: -40px;
   border: none;
+  z-index: 5;
+}
+.cardClose {
+  margin-left: 350px;
+}
+.addClose {
+  margin-top: -20px;
 }
 .popup__button-close:hover {
   opacity: 60%;
@@ -80,25 +87,76 @@
   background-color: #ffffff;
   height: 330px;
   padding-left: 30px;
+  border-radius: 10px;
 }
 
 .popup__titleAdd {
   padding-top: 30px;
 }
 
+.popup__cards {
+  position: fixed;
+  margin: auto;
+  display: none;
+  z-index: 2;
+}
+.popup__card {
+}
+
+.popup__card-open {
+  display: block;
+}
+.popup__card-image {
+  max-width: 350px;
+  margin: auto;
+  height: auto;
+}
+.popup__description-card {
+  color: #ffffff;
+  font-size: 14px;
+
+  margin-top: 5px;
+  max-width: 200px;
+}
 @media screen and (max-width: 800px) {
 }
 @media screen and (max-width: 500px) {
   .popup {
-    max-width: 260px;
-    width: 100%;
-  }
-  .popup__form {
-    max-width: 282px;
+    max-width: 250px;
     width: 100%;
   }
 
   .popup__button-submit {
-    max-width: 238px;
+    max-width: 210px;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .popup__add {
+    max-width: 250px;
+    width: 100%;
+  }
+  .popup__card-image {
+    width: 280px;
+
+    height: auto;
+  }
+  .popup__button-close {
+    display: flex;
+    position: absolute;
+    background: transparent;
+    margin: auto;
+    margin-left: 235px;
+    margin-top: -40px;
+    border: none;
+    z-index: 5;
+    width: 20px;
+  }
+  .addClose {
+    margin-top: -15px;
+  }
+
+  .popup__description-card {
+    margin-left: 20px;
   }
 }

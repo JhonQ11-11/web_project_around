@@ -8,3 +8,8 @@
   justify-content: center;
   margin: auto;
 }
+.container__cardPopup {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}

@@ -59,10 +59,22 @@
               type="url"
               placeholder="image URL"
               class="popup__input"
-              id="NewImage"
+              id="newImage"
             />
-            <button class="popup__button-submit">Save</button>
+            <button id="saveButton" class="popup__button-submit">Save</button>
           </form>
+        </div>
+      </div>
+      <div></div>
+      <div class="container__cardPopup">
+        <div class="popup__cards">
+          <button class="popup__button-close cardClose">
+            <img src="./images/Close-Icon.svg" alt="boton de cierre" />
+          </button>
+          <div class="popup__card">
+            <img class="popup__card-image" src=" " />
+            <h3 class="popup__description-card"></h3>
+          </div>
         </div>
       </div>
 
@@ -89,125 +101,137 @@
         </section>
         <section class="elements">
           <div class="cards">
-            <div class="card">
-              <button class="card__button-delete">
-                <img src="images/icon-delete.svg" class="" />
-              </button>
-              <img src="./images/Lago-Louise.jpg" class="card__image" alt="" />
-              <div class="card__container">
-                <p class="card__title">Lago de Louise</p>
-                <button class="card__like-button">
-                  <img
-                    src="./images/like-button.svg"
-                    alt="boton de 'MEGUSTA' "
-                  />
+            <!--
+            
+              <div class="card">
+                <button class="card__button-delete">
+                  <img src="images/icon-delete.svg" class="" />
                 </button>
+                <img
+                  src="./images/Lago-Louise.jpg"
+                  class="card__image"
+                  alt=""
+                />
+                <div class="card__container">
+                  <p class="card__title">Lago de Louise</p>
+                  <button class="card__like-button">
+                    <img
+                      src="./images/like-button.svg"
+                      alt="boton de 'MEGUSTA' "
+                    />
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="card">
-              <button class="card__button-delete">
-                <img src="images/icon-delete.svg" class="" />
-              </button>
-              <img src="./images/LagoDiBrales.jpg" class="card__image" alt="" />
-              <div class="card__container">
-                <p class="card__title">Lago de Brales</p>
-                <button class="card__like-button">
-                  <img
-                    src="./images/like-button.svg"
-                    alt="boton de 'MEGUSTA' "
-                  />
+              <div class="card">
+                <button class="card__button-delete">
+                  <img src="images/icon-delete.svg" class="" />
                 </button>
+                <img
+                  src="./images/LagoDiBrales.jpg"
+                  class="card__image"
+                  alt=""
+                />
+                <div class="card__container">
+                  <p class="card__title">Lago de Brales</p>
+                  <button class="card__like-button">
+                    <img
+                      src="./images/like-button.svg"
+                      alt="boton de 'MEGUSTA' "
+                    />
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="card">
-              <button class="card__button-delete">
-                <img src="images/icon-delete.svg" class="" />
-              </button>
-              <img src="./images/Latemar.jpg" class="card__image" alt="" />
-              <div class="card__container">
-                <p class="card__title">Latemar</p>
-                <button class="card__like-button">
-                  <img
-                    class=""
-                    src="./images/like-button.svg"
-                    alt="boton de 'MEGUSTA' "
-                  />
+              <div class="card">
+                <button class="card__button-delete">
+                  <img src="images/icon-delete.svg" class="" />
                 </button>
+                <img src="./images/Latemar.jpg" class="card__image" alt="" />
+                <div class="card__container">
+                  <p class="card__title">Latemar</p>
+                  <button class="card__like-button">
+                    <img
+                      class=""
+                      src="./images/like-button.svg"
+                      alt="boton de 'MEGUSTA' "
+                    />
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="card">
-              <button class="card__button-delete">
-                <img src="images/icon-delete.svg" class="" />
-              </button>
-              <img
-                src="./images/Montañas-Calvas.jpg"
-                class="card__image"
-                alt=""
-              />
-              <div class="card__container">
-                <p class="card__title">Montañas Calvas</p>
-                <button class="card__like-button">
-                  <img
-                    class=""
-                    src="./images/like-button.svg"
-                    alt="boton de 'MEGUSTA' "
-                  />
+              <div class="card">
+                <button class="card__button-delete">
+                  <img src="images/icon-delete.svg" class="" />
                 </button>
+                <img
+                  src="./images/Montañas-Calvas.jpg"
+                  class="card__image"
+                  alt=""
+                />
+                <div class="card__container">
+                  <p class="card__title">Montañas Calvas</p>
+                  <button class="card__like-button">
+                    <img
+                      class=""
+                      src="./images/like-button.svg"
+                      alt="boton de 'MEGUSTA' "
+                    />
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="card">
-              <button class="card__button-delete">
-                <img src="images/icon-delete.svg" class="" />
-              </button>
-              <img
-                src="./images/Valle-Yosemite.jpg"
-                class="card__image"
-                alt=""
-              />
-              <div class="card__container">
-                <p class="card__title">Yosemite</p>
-                <button class="card__like-button">
-                  <img
-                    class=""
-                    src="./images/like-button.svg"
-                    alt="boton de 'MEGUSTA' "
-                  />
+              <div class="card">
+                <button class="card__button-delete">
+                  <img src="images/icon-delete.svg" class="" />
                 </button>
+                <img
+                  src="./images/Valle-Yosemite.jpg"
+                  class="card__image"
+                  alt=""
+                />
+                <div class="card__container">
+                  <p class="card__title">Yosemite</p>
+                  <button class="card__like-button">
+                    <img
+                      class=""
+                      src="./images/like-button.svg"
+                      alt="boton de 'MEGUSTA' "
+                    />
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="card">
-              <button class="card__button-delete">
-                <img src="images/icon-delete.svg" class="" />
-              </button>
-              <img
-                src="./images/VanoisNational.jpg"
-                class="card__image"
-                alt=""
-              />
-              <div class="card__container">
-                <p class="card__title">Vanois National</p>
-                <button class="card__like-button">
-                  <img
-                    class=""
-                    src="./images/like-button.svg"
-                    alt="boton de 'MEGUSTA' "
-                  />
+              <div class="card">
+                <button class="card__button-delete">
+                  <img src="images/icon-delete.svg" class="" />
                 </button>
+                <img
+                  src="./images/VanoisNational.jpg"
+                  class="card__image"
+                  alt=""
+                />
+                <div class="card__container">
+                  <p class="card__title">Vanois National</p>
+                  <button class="card__like-button">
+                    <img
+                      class=""
+                      src="./images/like-button.svg"
+                      alt="boton de 'MEGUSTA' "
+                    />
+                  </button>
+                </div>
               </div>
-            </div>
+             -->
           </div>
         </section>
       </main>
       <footer class="footer">&copy; 2024 Around The U.S</footer>
     </div>
-    <template id=" card-template">
+    <template id="card-template" class="cards">
       <div class="card">
+        <button class="card__button-delete">
+          <img src="images/icon-delete.svg" class="" />
+        </button>
         <img src="" class="card__image" alt="" />
         <div class="card__container">
           <p class="card__title"></p>
-          <button class="card__like-button">
-            <img src="./images/like-button.svg" alt="boton de 'MEGUSTA' " />
-          </button>
+          <button class="card__like"></button>
         </div>
       </div>
     </template>

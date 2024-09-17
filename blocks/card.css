@@ -11,7 +11,8 @@
 .card__image {
   max-width: 282px;
   width: 100%;
-  height: auto;
+  max-height: 252px;
+  height: 252px;
   background: black;
 
   object-fit: cover;
@@ -21,14 +22,17 @@
 }
 
 .card__button-delete {
+  display: flex;
+  margin-left: 245px;
+
   border: none;
   position: absolute;
   width: 28px;
   height: 28px;
   z-index: 1;
   background: none;
-  margin-left: 245px;
-  margin-top: 10px;
+  padding-left: 0px;
+  padding-top: 10px;
 }
 .card__container {
   display: flex;
@@ -49,8 +53,19 @@
   text-overflow: ellipsis;
   box-sizing: border-box;
 }
-.card__like-button {
+.card__like {
   border: none;
   margin: auto;
-  margin-right: 18px;
+  margin-right: 26px;
+  background-image: url(../images/like-button.svg);
+  width: 25px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+
+.card__like-active {
+  opacity: 1;
+  background: url(https://practicum-content.s3.us-west-1.amazonaws.com/web-code/dom/moved_heart-filled.svg)
+    center no-repeat;
+  background-repeat: no-repeat;
 }

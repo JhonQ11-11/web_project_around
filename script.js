@@ -7,6 +7,7 @@ const submit = document.querySelectorAll(".popup__button-submit");
 //const deleteButton = document.querySelector(".card__button-delete");
 const cardsContainer = document.querySelector(".cards");
 const saveCardButton = document.querySelector("#saveButton");
+const formCard = document.querySelector(".popup__form-add");
 //
 const inputTitle = document.querySelector("#title");
 const inputImage = document.querySelector("#newImage");
@@ -60,6 +61,8 @@ function handleProfileFormSubmit(evt) {
   name.textContent = inputName.value; //INGRESAR TEXTO AL INPUT - obtiene el texto que el usuario a ingreado
   about.textContent = inputAbout.value; //cambiael contenido del elemento con la clase profile__name/ profile__ocupation para que muestre el tecto ingreado x el usuario
   closePopup();
+  inputName.value = "";
+  inputAbout.value = "";
 }
 
 //funcion validar formulario editProfile
@@ -156,7 +159,9 @@ function addImage(titleValue, imageValue) {
         addElement.remove();
       }
     });
+  closePopupAdd();
 }
+
 function checkformAdd() {
   if (inputTitle.value === "" || inputImage.value == "") {
     submit[1].disabled = true;
@@ -174,24 +179,27 @@ inputImage.addEventListener("input", () => {
 });
 //submit[1].addEventListener("click", confirmar);
 
-function confirmar(evt) {
+/*function confirmar(evt) {
   evt.preventDefault();
   const title = document.querySelector(".card__title");
   const image = document.querySelector(".card__image");
   title.textContent = inputTitle.value;
   image.src = inputImage.value;
   closePopupAdd();
-}
+}*/
 
 //submit[1].addEventListener("click", confirmar);
 
 //
 
-saveCardButton.addEventListener("click", function (evt) {
+formCard.addEventListener("submit", function (evt) {
   //
   evt.preventDefault();
 
   const title = document.querySelector("#title");
   const image = document.querySelector("#newImage");
   addImage(title.value, image.value);
+
+  inputTitle.value = "";
+  inputImage.value = "";
 });

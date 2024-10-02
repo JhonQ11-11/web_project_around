@@ -4,7 +4,6 @@ const closeButton = document.querySelectorAll(".popup__button-close"); //selleci
 const inputName = document.querySelector("#name"); // se usa # cuando es ID
 const inputAbout = document.querySelector("#about-me");
 const submit = document.querySelectorAll(".popup__button-submit");
-//const deleteButton = document.querySelector(".card__button-delete");
 const cardsContainer = document.querySelector(".cards");
 const saveCardButton = document.querySelector("#saveButton");
 const formCard = document.querySelector(".popup__form-add");
@@ -96,6 +95,8 @@ function closePopup() {
 }
 closeButton[0].addEventListener("click", closePopup); // primer elemento que se encuentre del array
 //
+
+//
 // POPUP AGREGAR
 function openAddButton() {
   const popupAdd = document.querySelector(".popup__add");
@@ -155,9 +156,8 @@ function addImage(titleValue, imageValue) {
     .querySelector(".card__button-delete")
     .addEventListener("click", function (evt) {
       console.log(evt);
-      {
-        addElement.remove();
-      }
+
+      addElement.remove();
     });
   closePopupAdd();
 }
